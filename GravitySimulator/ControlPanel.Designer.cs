@@ -33,6 +33,7 @@
             simulateGravity = new CheckBox();
             addForm = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            centerMouse = new CheckBox();
             SuspendLayout();
             // 
             // removeForm
@@ -71,11 +72,23 @@
             timer1.Interval = 16;
             timer1.Tick += timer1_Tick;
             // 
+            // centerMouse
+            // 
+            centerMouse.AutoSize = true;
+            centerMouse.Location = new Point(163, 46);
+            centerMouse.Name = "centerMouse";
+            centerMouse.Size = new Size(100, 19);
+            centerMouse.TabIndex = 3;
+            centerMouse.Text = "Center Mouse";
+            centerMouse.UseVisualStyleBackColor = true;
+            centerMouse.CheckedChanged += centerMouse_CheckedChanged;
+            // 
             // ControlPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(257, 77);
+            ClientSize = new Size(271, 77);
+            Controls.Add(centerMouse);
             Controls.Add(addForm);
             Controls.Add(simulateGravity);
             Controls.Add(removeForm);
@@ -92,5 +105,6 @@
         private CheckBox simulateGravity;
         private Button addForm;
         private System.Windows.Forms.Timer timer1;
+        private CheckBox centerMouse;
     }
 }
